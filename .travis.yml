@@ -33,10 +33,12 @@ before_deploy:
 
 deploy:
   provider: releases
+  edge: 
+    source: travis-ci/dpl
+    branch: master
   api_key:
     secure: XOU5TyjCmQUYxt3Sv3Zw/NuunbUOeQCtFY5qLy5EgLcBXaVSnV1MVtr/1YzcwZfDYFgg4KHKgWHBIGLbyLnmYxlQtFzB9vvEkVXz45DPa47F+r6d5I7Dg9RQqUvKhLoPAIOVdNImSUwk3N9x2AAHerKD4s4GLJYe/nFo1oqftOBp75nFpgNHEBw77MlLTzN+ZUvi3gyj7W9EwpLk9r9V/flz6SfZLri+r9yZxTZ05yq+ruIRGiF75WeQaU0RLCCM7YIOwD3bYyMleWZftH1X4Y8hVagcEIrGyFg7eMXe3GIZnTHkxwukX/5PU1bmQMO3JvRmcr5RZJ+k8WqT9l68u7xgZGpVTxYJyzYH7+FPC/tMProbomO0DMJdv5Droe+X8pDxZz5S/oEawY59tM5Cx7JKIaDzvB1MOXQzrVtoyneltKh4Db+FQTo4rcSjdvMTRlchNFh4kaml9JVlfPQ0sgShCUcpk+lqPfbIhyQbLahpcHWLF4fBp98FJTQ3UJdXgu8gHdKwYOhwNyunUjATrv8ntNWr+5ZxzJ4TIIFJ/Jd4Qm1RPz/6s+Y7YP6WQGUCSVRzhv4bML7IFZLkQKUV4QTESvQaVownCB4ybe6ESEI6NsT4Dlnjhgds19jlpYi5NiJQQSraDQzHE/0hqal1n0EUBIoKnZeyzn8Nv+PNYLk=
   file: builds.zip
   skip_cleanup: true
-  edge: true
   on:
     repo: ar-ne/beefweb
